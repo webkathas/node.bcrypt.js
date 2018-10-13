@@ -164,6 +164,7 @@ module.exports.hash = function hash(data, salt, cb) {
 /// @return {bool} true if hashed data matches hash
 module.exports.compareSync = function compareSync(data, hash) {
     if (data == null || hash == null) {
+        return null;
         throw new Error('data and hash arguments required');
     }
 
